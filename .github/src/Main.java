@@ -21,14 +21,29 @@ public class Main {
                 System.out.print(' ');
             }
 
-            else if (c + key <= 122 && c + key >= 97|| c + key <= 90) {
-                c += key;
-                System.out.print(c);
+            else if (c <=90) {
+                if (c + key <= 90) {
+                    c += key;
+                    System.out.print(c);
+                }
+
+                else if (c + key > 90) {
+                    c += key - 26;
+                    System.out.print(c);
+                }
             }
-            else if (c + key > 122 || c + key > 90) {
-                c += key - 26;
-                System.out.print(c);
+            else if (c <= 122) {
+                if (c + key <= 122) {
+                    c += key;
+                    System.out.print(c);
+                }
+
+                else if (c + key > 122) {
+                    c += key - 26;
+                    System.out.print(c);
+                }
             }
+
 
 
         }
